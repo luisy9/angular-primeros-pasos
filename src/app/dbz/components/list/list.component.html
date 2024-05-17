@@ -1,0 +1,15 @@
+<ul class="grid grid-cols-3 gap-5">
+  <li *ngFor="let personaje of characters; let index = index">
+    <div [ngClass]="'bg-slate-100 border-none rounded-xl p-3'">
+      <span>Nombre: {{ personaje.nombre }}</span>
+      <span>Power: {{ personaje.poder }} </span>
+
+      <button
+        class="p-2 border border-red-400 text-red-400 rounded-xl"
+        (click)="deleteItem(personaje.id)"
+      >
+        Eliminar
+      </button>
+    </div>
+  </li>
+</ul>

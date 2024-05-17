@@ -1,0 +1,35 @@
+<form
+  class="flex flex-col justify-center w-96 max-auto bg-slate-500 h-96 border-none rounded-xl"
+  (ngSubmit)="addCharacterForm()"
+>
+  <div class="text-center text-4xl text-white p-4">
+    <h1>Form</h1>
+  </div>
+  <div class="w-full flex flex-col gap-7">
+    <div class="flex w-full justify-center">
+      <input
+        type="text"
+        [(ngModel)]="addCharacter.nombre"
+        name="nombre"
+        placeholder="Nombre"
+        class="w-3/5 border-none rounded-2xl p-2"
+      />
+    </div>
+
+    <div class="flex w-full justify-center">
+      <input
+        type="number"
+        [(ngModel)]="addCharacter.poder"
+        name="poder"
+        placeholder="Poder"
+        class="w-3/5 border-none rounded-2xl p-2"
+      />
+    </div>
+  </div>
+
+  <div class="h-full flex items-end">
+    <button type="submit" class="border-none p-2 bg-sky-400 text-white w-full">
+      Añadir
+    </button>
+  </div>
+</form>

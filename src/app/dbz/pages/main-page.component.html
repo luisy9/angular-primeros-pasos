@@ -1,0 +1,15 @@
+<div class="">
+  <!-- Header de la pagina -->
+  <h1 class="text-red-300 text-4xl font-bold">DBZ MAIN PAGE</h1>
+
+  <div class="">
+    <dbz-list
+      [characters]="characters"
+      (characterDeleted)="characterDeleted($event)"
+    ></dbz-list>
+  </div>
+
+  <div class="pt-20">
+    <add-character (onNewCharacter)="onNewCharacter($event)"></add-character>
+  </div>
+</div>

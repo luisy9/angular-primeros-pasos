@@ -1,0 +1,33 @@
+<h1 class="text-red-400 text-5xl">{{ nombre }}</h1>
+
+<div class="flex flex-col gap-2 pt-2">
+  <h1 class="text-xl">Nombre heroe: {{ nombre }}</h1>
+  <h1 class="text-xl">Age heroe: {{ age }}</h1>
+  <h1 class="text-xl">Nombre capitalizado heroe: {{ capitalizedName }}</h1>
+
+  <h1 class="">Descripcion del heroe: {{ heroDescription }}</h1>
+</div>
+
+<div class="flex gap-5 pt-6">
+  <button
+    *ngIf="nombre !== 'Bane'"
+    class="border-none rounded-xl p-2 bg-green-200 hover:bg-sky-200"
+    (click)="changeHeroeName('Bane')"
+  >
+    Cambiar nombre
+  </button>
+  <button
+    *ngIf="age === 22"
+    class="border-none rounded-xl p-2 bg-green-200 hover:bg-sky-200"
+    (click)="changeHeroeAge(30)"
+  >
+    Cambiar edad
+  </button>
+
+  <button
+    class="border-none rounded-xl p-2 bg-yellow-200 hover:bg-sky-200"
+    (click)="resetForm()"
+  >
+    Reset Form
+  </button>
+</div>
